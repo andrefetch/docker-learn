@@ -1,3 +1,7 @@
 FROM debian:stable-slim
 
-CMD ["echo", "hello world"]
+COPY docker-learn /bin/goserver
+
+ENV PORT=8991
+
+CMD ["/bin/goserver"]
